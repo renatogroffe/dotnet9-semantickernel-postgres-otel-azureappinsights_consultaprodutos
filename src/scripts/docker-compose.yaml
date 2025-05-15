@@ -1,0 +1,10 @@
+services:
+      
+  postgres:
+    image: postgres
+    volumes:
+      - ./basecatalogo.sql:/docker-entrypoint-initdb.d/01-basecatalogo.sql
+    environment:
+      POSTGRES_PASSWORD: "Postgres2025!"
+    ports:
+      - "5432:5432"
